@@ -1,0 +1,126 @@
+﻿<Application x:Class="DevCor.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:DevCor="clr-namespace:DevCor"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>     
+
+        
+        <!--~~~~~~~~~~~~~~~~~~-->
+        <!-- Стиль для Button-->
+
+        <Style TargetType="{x:Type Button}" x:Key="DevCorButton"> 
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="#21346b"/>
+            <Setter Property="FontFamily" Value="Fonts/#BankGothic Md BT"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="5" BorderThickness="6" BorderBrush="#21346b">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,5">
+                                    <GradientStop Offset="0.0" Color="White"/>
+                                    <GradientStop Offset="0.5" Color="#21346b"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                           <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>                        
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!--~~~~~~~~~~~~~~~~~~-->
+        <!-- Стиль для WaterMarkTextBox-->
+        
+        <Style TargetType="{x:Type TextBox}" x:Key="DevCorWaterMarkTextBox"> 
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#21346b"/>
+            <Setter Property="FontFamily" Value="Fonts/#BankGothic Md BT"/>            
+            <Setter Property="Template">
+               <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="5" BorderThickness="6" BorderBrush="#21346b" Background="White">
+                            <Grid>
+                                <ScrollViewer Margin="0" x:Name="PART_ContentHost"/> 
+                                <TextBlock x:Name="textBlock" Opacity="0.5" Text="  Login..." Visibility="Hidden"  VerticalAlignment="Center"/>
+                            </Grid>                       
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsFocused" Value="False"/>
+                                    <Condition Property="Text" Value="{x:Null}"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="textBlock" Value="Visible"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsFocused" Value="False"/>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="textBlock" Value="Visible"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!--~~~~~~~~~~~~~~~~~~-->
+        <!-- Стиль для WaterMarkTextBox-->
+
+        <Style TargetType="{x:Type TextBox}" x:Key="DevCorTextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#21346b"/>
+            <Setter Property="FontFamily" Value="Fonts/#BankGothic Md BT"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="5" BorderThickness="6" BorderBrush="#21346b" Background="White">
+                            <Grid>
+                                <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--~~~~~~~~~~~~~~~~~~-->
+        <!-- Стиль для PasswordBox-->
+
+        <Style TargetType="{x:Type PasswordBox}" x:Key="DevCorPasswordBox">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#21346b"/>
+            <Setter Property="FontFamily" Value="Fonts/#BankGothic Md BT"/>
+            <Setter Property="DevCor:WaterMark.IsMonitoring" Value="True"/> 
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border CornerRadius="5" BorderThickness="6" BorderBrush="#21346b" Background="White" >
+                            <Grid>                                
+                                <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                <TextBlock x:Name="textBlock" Opacity="0.5" Text="  Password..." Visibility="Hidden"  VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="DevCor:WaterMark.HasText" Value="False"/>
+                                    <Condition Property="IsFocused" Value="False"/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="textBlock" Value="Visible"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+    </Application.Resources>
+</Application>
