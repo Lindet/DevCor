@@ -24,7 +24,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Image  Height="43" HorizontalAlignment="Left" Margin="30,90,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="151" Source="/DevCor;component/Images/512.png" Grid.Column="1" />
-        <Button Style="{StaticResource DevCorButton}" Height="44" HorizontalAlignment="Left" Margin="30,348,0,0" Name="button1" VerticalAlignment="Top" Width="151" BorderBrush="#21346b" Content="Login" Click="button1_Click" Grid.Column="1" />
+        <Button Style="{StaticResource DevCorButtonWideBorder}" Height="44" HorizontalAlignment="Left" Margin="30,348,0,0" Name="button1" VerticalAlignment="Top" Width="151" BorderBrush="#21346b" Content="Login" Click="button1_Click" Grid.Column="1" />
         <Rectangle Height="12" Width="12" HorizontalAlignment="Left" Margin="0,12,0,0" Name="rectangle2" VerticalAlignment="Top" MouseLeftButtonUp="rectangle2_MouseLeftButtonUp" Grid.Column="2">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/DevCor;component/Images/cross.png" />

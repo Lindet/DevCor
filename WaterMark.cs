@@ -27,7 +27,7 @@ namespace DevCor
 
         static void OnIsMonitoringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            PasswordBox passB = d as PasswordBox;
+            var passB = d as PasswordBox;
             if ((bool)e.NewValue)
                 passB.PasswordChanged += PasswordChanged;
             else
@@ -37,7 +37,7 @@ namespace DevCor
 
         static void PasswordChanged(object sender, RoutedEventArgs e)
         {
-            PasswordBox passB = sender as PasswordBox;
+            var passB = sender as PasswordBox;
             if (passB == null)
                 return;
             SetTextLength(passB, passB.Password.Length);

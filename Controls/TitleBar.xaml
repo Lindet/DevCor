@@ -10,7 +10,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border CornerRadius="5,5,0,0" Grid.ColumnSpan="2" BorderBrush="Transparent" ClipToBounds="True">
+        <Border CornerRadius="5,5,0,0" Grid.ColumnSpan="2" BorderBrush="Transparent" ClipToBounds="True" MouseDown="OnDoubleMouseClick">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="0.3" Color="#ECECEC"/>
@@ -21,9 +21,9 @@
         </Border>
         
         <StackPanel Orientation="Horizontal" Grid.Column="0">
-            <Border Grid.Column="0" BorderThickness="2" BorderBrush="#21346b" Margin="5,2,2,2" Width="100" CornerRadius="8" Height="25" HorizontalAlignment="Left" ClipToBounds="True">
+            <Border BorderThickness="2" BorderBrush="#21346b" Margin="5,2,2,2" Width="100" CornerRadius="8" Height="25" HorizontalAlignment="Left" ClipToBounds="True">
                 <Border.Background>
-                    <ImageBrush ImageSource="Images/128.png"/>
+                    <ImageBrush ImageSource="/Images/128.png"/>
                 </Border.Background>
             </Border>
             <StackPanel Orientation="Vertical" Margin="10,0,0,0" >
@@ -33,7 +33,7 @@
         </StackPanel>
         
         <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
-            <Image Source="Images/cross.png" Margin="10,5,10,5" Width="15" Height="15" MouseLeftButtonDown="OnMouseLeftButtonDown"/>
+            <Image Source="/Images/cross.png" Margin="10,5,10,5" Width="15" Height="15" MouseLeftButtonDown="OnMouseLeftButtonDown"/>
             <Image></Image>
         </StackPanel>
         

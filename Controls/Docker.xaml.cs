@@ -12,21 +12,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DevCor
+namespace DevCor.Controls
 {
     /// <summary>
-    /// Interaction logic for TitleBar.xaml
+    /// Interaction logic for Docker.xaml
     /// </summary>
-    public partial class TitleBar : UserControl
+    public partial class Docker : UserControl
     {
-        public TitleBar()
+        public Docker()
         {
             InitializeComponent();
-        }
-
-        private void OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Application.Current.Shutdown();
         }
     }
 }
