@@ -72,9 +72,7 @@
                     
                 </Grid>
                 <StackPanel Grid.Column="2">
-                    <controls:Docker/>
-                    <controls:Docker/>
-                    <controls:Docker/>
+                    <Expander Height="300" Style="{StaticResource DevCorExpander}"></Expander>
                 </StackPanel>
             </Grid>
         </StackPanel>
